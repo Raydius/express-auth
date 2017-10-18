@@ -7,5 +7,7 @@ services:
     command: --smallfiles
   nodeapi:
     build: ./app
+    volumes:
+     - ./config:/usr/src/app/config
     ports:
      - "3200:3000"
