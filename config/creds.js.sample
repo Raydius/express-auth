@@ -1,0 +1,7 @@
+module.exports = {
+	'googleAuth': {
+		'clientID'		: '',
+		'clientSecret'	: '',
+		'callbackUrl'	: 'http://localhost:3200/auth/google/callback'
+	}
+};

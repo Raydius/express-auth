@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:3.4.4
+    volumes:
+     - ./data:/data
+    command: --smallfiles
+  nodeapi:
+    build: ./app
+    ports:
+     - "3200:3000"
