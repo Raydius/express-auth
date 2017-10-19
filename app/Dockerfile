@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 RUN npm install
 
-# add other core scripts
+# add other core scripts that don't need hot-reloading
 COPY app.js /usr/src/app/
 COPY authcheck.js /usr/src/app/
 COPY models /usr/src/app/models
