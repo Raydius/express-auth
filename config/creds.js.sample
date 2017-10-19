@@ -1,7 +1,12 @@
 module.exports = {
+
+    // API credentials from Google Cloud API
 	'googleAuth': {
 		'clientID'		: '',
 		'clientSecret'	: '',
 		'callbackUrl'	: 'http://localhost:3200/auth/google/callback'
-	}
+	},
+
+	// allowed login domains (optional)
+	'domainCheck': 'gmail.com'
 };

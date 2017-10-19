@@ -9,5 +9,8 @@ services:
     build: ./app
     volumes:
      - ./config:/usr/src/app/config
+     - ./app/routes:/usr/src/app/routes
+     - ./app/stylesheets:/usr/src/app/stylesheets
+     - ./app/views:/usr/src/app/views
     ports:
      - "3200:3000"

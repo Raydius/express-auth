@@ -7,7 +7,7 @@ var creds = require('../config/creds');
 
 // initialize MongoDB
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://mongo:27017/bachelorette');
+mongoose.connect('mongodb://mongo:27017/expressauth');
 var User = require('../models/user');
 
 // initialize PassportJS for Google Auth
@@ -63,6 +63,17 @@ router.get('/google/callback',
 		res.redirect('/');
 	}
 );
+
+// login screen
+router.get('/login', function(req, res, next) {
+	res.render('login');
+});
+
+// logout screen
+router.get('/logout', function (req, res) {
+	req.logout();
+	res.redirect('/');
+});
 
 module.exports = router;
 
